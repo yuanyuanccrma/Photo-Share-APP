@@ -1,0 +1,36 @@
+.leftuser {
+  text-align: center;
+  border-bottom: 2px solid #ccc;
+}
+.list-item {
+  width: 100%;
+  height: 59px;
+ 
+}
+.list-item:hover {
+  font-size: 40px;
+  background: #f6f6f6;
+}
+a {
+  width: 100%;
+  height: 100%;
+  font-size: 25px;
+  margin-top: 15px;
+}
+
+span.commentCount {
+    background: -webkit-gradient(linear, left top, left bottom, from(#FF9999), to(#FF9966));
+    color: white;
+    border-radius: 6px;
+    padding:7px;
+    margin-left: 3px;
+}
+span.commentCount a {
+  color:white;
+}
+span.photosCount {
+  background: -webkit-gradient(linear, left top, left bottom, from(#99CCCC), to(#99CC99));  
+  color: white;
+  border-radius:6px;
+  padding: 7px;
+}

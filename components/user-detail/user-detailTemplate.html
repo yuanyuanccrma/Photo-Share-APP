@@ -1,0 +1,12 @@
+
+<div class="userdetial">
+    <md-list layout = "column">
+        <md-list-item layout = "column" class = "detial">
+    <h1>Name: {{userDetail.first_name + " " + userDetail.last_name}}</h1>
+ 	<p><i class="material-icons md-36">room</i>Location: {{userDetail.location}}</p>
+ 	<p><i class="material-icons md-36">work</i>Occupation: {{userDetail.occupation}}</p>
+  	<p><i class="material-icons md-36">speaker_notes</i>Description: {{userDetail.description}}</p>
+            <div><a ng-href="#/photos/{{userDetail._id}}"><i class="material-icons md-36">camera_alt</i>Photos</a></div>
+        </md-list-item>
+    </md-list>
+</div>

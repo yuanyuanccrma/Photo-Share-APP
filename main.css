@@ -1,0 +1,67 @@
+/*
+CSS for the CS142 project #5 main page
+
+Since CSS uses a global name space for classes we should use class names starting with
+cs142-main- here.
+*/
+body {
+    color: #31353D;
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    
+}
+html {
+    /*font-family: 'Lora', serif;*/
+    background: #FCF9FF;
+}
+div {
+    margin: 10pt;
+    text-align: center;
+    border-radius: 10pt;
+}
+h1, h2, h3 {
+    font-family: 'Avenir', sans-serif;
+    margin: 20pt;
+}
+a {
+    text-decoration: none;
+    color: #666666;
+}
+md-toolbar.tool{
+    background: #99CCCC;
+}
+.userlog{
+    margin-left: 10pt;
+    font-size: 30px;
+}
+.input{
+    border: white;
+}
+.addbutton{
+    margin-left:10pt;
+}
+.title{
+    margin-left: 100pt;
+}
+.favlist{
+    color: white;
+    font-size: 18px;
+}
+.material-icons.orange600 { color: #FF9999; }
+.material-icons.md-36 { font-size: 36px; }
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+}

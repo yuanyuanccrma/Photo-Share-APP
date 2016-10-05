@@ -1,0 +1,11 @@
+<div>
+    <md-list>
+        <md-list-item class="list-item" ng-repeat = "user in users">
+           <a ng-href="#/users/{{user._id}}">
+	    	<div class="leftuser">{{user.first_name + " " + user.last_name}}</div>
+            </a>
+            <span class="photosCount">{{user.numPhotos}}</span>
+            <span class="commentCount">{{user.numComments}}</span>
+        </md-list-item>
+    </md-list>  
+</div>

@@ -1,0 +1,59 @@
+<div>
+<md-card>
+     <md-tabs md-dynamic-height md-border-bottom>
+      <md-tab label="Log In" layout ="row"><i class="material-icons">person</i>
+	<md-subheader class="aa">Log in to get more information</md-subheader>
+	<md-input-container>
+	  	<label>Login Name:</label>
+	  	<input type="text" ng-model="login_name"  >
+	</md-input-container>
+	<md-input-container>
+		<label>Please enter your password:</label>
+		<input type="password" ng-model="password" >
+	</md-input-container>
+    <div class="login_register_message" ng-if="loginFailed"> No user with the login name or password. Please try again.</div>
+	<md-button class="md-raised" ng-click="login()">Log In</md-button>
+     </md-tab>
+         <md-tab label="Register New User"><i class="material-icons">person_add</i>
+        <md-content class="md-padding">
+            <div >
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Login Name:</label>
+                    <input ng-model="new_login_name">
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Password:</label>
+                    <input type="password" ng-model="new_password">
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Confirm Password:</label>
+                    <input type="password" ng-model="repassword">
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>First Name:</label>
+                    <input ng-model="new_first_name">
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Last Name:</label>
+                    <input ng-model="new_last_name">
+                </md-input-container>
+            <md-input-container class="md-block">
+                <label>location:</label>
+                <input ng-model="new_loacation">
+            </md-input-container>
+             <md-input-container class="md-block">
+                <label>Description:</label>
+                <input ng-model="new_description">
+            </md-input-container>
+             <md-input-container class="md-block">
+                <label>Occupation:</label>
+                <input ng-model="new_occuoation">
+            </md-input-container>
+                </div>
+            <md-button ng-click="register()">Register Me</md-button>
+            </md-content>
+            </md-tab>
+    </md-tabs>
+</md-card>
+
+</div>

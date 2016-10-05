@@ -1,0 +1,18 @@
+.photo-item {
+  background-color: white;
+}
+.photo-info{
+    font-size: 15pt;
+    color: #c0c1c2;
+    background-color: #f7f7f9;
+}
+.comment{
+    color: #434A54;
+    font-weight: 100;
+    background-color: #E6E9ED;
+    margin-top: 30px;
+    border-radius: 30px;
+}
+.love {
+  border-bottom: 1px solid #ccc;
+}

@@ -1,0 +1,49 @@
+
+<div>
+    <md-list>
+        <md-list-item class="photo-item" layout="column" ng-repeat = "photo in userphoto | orderBy: ['-likes.length', '-date_time']">
+            <md-card class="photo-info">
+                <img ng-src="images/{{photo.file_name}}">
+                <md-card-content>
+                    <p>Taken on {{photo.date_time}} </p>
+                    <div layout="row" class= "love">
+                        <md-button ng-if="photo.likes.length === 0" ng-click = "like(photo._id)"><i class="material-icons md-36">favorite_border</i></md-button>
+                        <md-button ng-if="photo.likes.length !== 0" ng-click = "like(photo._id)"><i class="material-icons orange600 md-36">favorite</i></md-button>
+                        <p>{{photo.likes.length}} {{likeNum(photo.likes.length)}}</p>
+                        
+                        <md-button ng-if="!likedFunc(photo._id)" ng-click="favorite(photo)"><i class="material-icons md-36">loyalty</i>Add to Favorite</md-button>
+                        <md-button ng-if="likedFunc(photo._id)"> <i class="material-icons orange600 md-36">loyalty</i>Add to Favorite</md-button>
+                    
+                        <md-button ng-click="deletephoto(photo._id)"><i class="material-icons">delete_forever</i> Delete Photo </md-button>
+                    </div>
+                    <md-list>
+                        <md-list-item  class="comment" ng-repeat="comment in photo.comments">
+                            <div layout="column">
+                                <p><i class="material-icons md-36">comment</i>Comments:</p>
+                                <p>{{comment.comment}}</p>	
+                                <p><a ng-href="#/users/{{comment.user._id}}">{{comment.user.first_name + " " + comment.user.last_name}}
+                                    </a> 
+                                    at {{comment.date_time}}
+                                </p>
+                                <div flex="10">
+                                    <md-button ng-click="deletecomment(photo._id, comment)"> <i class="material-icons">delete</i>Delete Comment </md-button>
+                                </div>
+                            </div>
+					   </md-list-item>
+				    </md-list>
+                    <div class="md-toolbar-tools">
+                        <div flex="90">
+                            <md-input-container class="md-block" flex-gt-sm>
+                                <label>Add a comment...</label>
+                                <input ng-model="newcomment[photo._id]" >
+                            </md-input-container>
+                        </div>
+                        <div flex="10">
+                            <md-button class="md-raised" ng-click="addcomment(photo._id)">Send</md-button>
+                        </div>
+                    </div>
+			     </md-card-content>
+            </md-card>
+           </md-list-item>
+    </md-list>  
+</div>

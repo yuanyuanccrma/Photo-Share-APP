@@ -1,0 +1,12 @@
+<div>
+    <md-list>
+        <h1><i class="material-icons orange600 md-36">favorite</i>Favorite Photos:</h1>
+        <md-list-item class = "favv" ng-repeat="photos in favorlist">
+            <a ng-href="/images/{{photos.file_name}}" data-lightbox="image-1" data-title="{{photos.date_time}}">
+                <img ng-src="/images/{{photos.file_name}}" style="width:250px; height:250px" ></a>
+
+
+            <div><md-button ng-click="favdelete(photos)"><i class="material-icons">delete_sweep</i>Delete</md-button></div>
+        </md-list-item>
+    </md-list>
+</div>
